@@ -29,19 +29,19 @@
             >;
         };
 
-        // --------------------------------------------------------------------------------------------
-        // | BTCLR | BT1 | BT2 | BT3 | BT4 | BT5 |              |     |     |       |     |  -  |  =  |
-        // |       |     |     |     |     |     |              |     |     |       |     |  [  |  ]  |
-        // |       |     |     |     |     |     |              |     |     |       |     |     |     |
-        // |       |     |     |     |     |     |     |  | DEL |     |     |       |     |     |     |
+        // ----------------------------------------------------------------------------------------------
+        // | BTCLR | BT1 | BT2 | BT3 | BT4 | BT5 |                |     |     |       |     |  -  |  =  |
+        // |       | BD1 | BD2 | BD3 | BD4 | BD5 |                |     |     |       |     |  [  |  ]  |
+        // |       |     |     |     |     |     |                |     |     |       |     |     |     |
+        // |       |     |     |     |     |     |       |  | DEL |     |     |       |     |     |     |
         //                     |     |     |     | SPACE |  |     |     |     | SUPER |
 
         lower_layer {
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                     &trans  &trans  &trans  &trans  &kp MINUS  &kp EQUAL
-&trans      &trans        &trans        &trans        &trans        &trans                           &trans  &trans  &trans  &trans  &kp LBKT   &kp RBKT
-&trans      &trans        &trans        &trans        &trans        &trans                           &trans  &trans  &trans  &trans  &trans     &trans
-&trans      &trans        &trans        &trans        &trans        &trans        &trans    &kp DEL  &trans  &trans  &trans  &trans  &trans     &trans
+&bt BT_CLR  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4                         &trans  &trans  &trans  &trans  &kp MINUS  &kp EQUAL
+&trans      &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4                        &trans  &trans  &trans  &trans  &kp LBKT   &kp RBKT
+&trans      &trans         &trans         &trans         &trans         &trans                               &trans  &trans  &trans  &trans  &trans     &trans
+&trans      &trans         &trans         &trans         &trans         &trans         &trans       &kp DEL  &trans  &trans  &trans  &trans  &trans     &trans
                                           &trans         &trans         &trans         &kp SPACE    &trans   &trans  &trans  &mo 3
             >;
         };
