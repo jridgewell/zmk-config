@@ -34,7 +34,7 @@
         // |       |     |     |     |     |     |              |     |     |       |     |  [  |  ]  |
         // |       |     |     |     |     |     |              |     |     |       |     |     |     |
         // |       |     |     |     |     |     |     |  | DEL |     |     |       |     |     |     |
-        //                     |     |     |     |     |  |     |     |     | SUPER |
+        //                     |     |     |     | SPACE |  |     |     |     | SUPER |
 
         lower_layer {
             bindings = <
@@ -42,7 +42,7 @@
 &trans      &trans        &trans        &trans        &trans        &trans                           &trans  &trans  &trans  &trans  &kp LBKT   &kp RBKT
 &trans      &trans        &trans        &trans        &trans        &trans                           &trans  &trans  &trans  &trans  &trans     &trans
 &trans      &trans        &trans        &trans        &trans        &trans        &trans    &kp DEL  &trans  &trans  &trans  &trans  &trans     &trans
-                                        &trans        &trans        &trans        &trans    &trans   &trans  &trans  &mo 3
+                                          &trans         &trans         &trans         &kp SPACE    &trans   &trans  &trans  &mo 3
             >;
         };
 
