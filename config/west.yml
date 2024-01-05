@@ -7,7 +7,7 @@ manifest:
   projects:
     - name: zmk
       remote: jridgewell
-      revision: ble-disconnect-on-select
+      revision: iris58
       import: app/west.yml
   self:
     path: config
