@@ -7,7 +7,7 @@ manifest:
   projects:
     - name: zmk
       remote: jridgewell
-      revision: iris58
+      revision: iris58-bt
       import: app/west.yml
   self:
     path: config
