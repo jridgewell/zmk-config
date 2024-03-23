@@ -14,6 +14,6 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: iris58_left
+    shield: iris58_left nice_view_adapter nice_view
   - board: nice_nano_v2
-    shield: iris58_right
+    shield: iris58_right nice_view_adapter nice_view
