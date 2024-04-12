@@ -59,10 +59,19 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(4,4) RC(4,7) RC(3,6) RC(3,7) 
         steps = <80>;
     };
 
-    sensors: sensors {
+    left_thumbstick: thb {
+        compatible = "ck,thb";
+        label = "JOYSTICK";
+        io-channels = <&adc 3>, <&adc 2>;
+        io-channel-names = "X-AXIS", "Y-AXIS";
+        min-mv = <300>;
+        max-mv = <3000>;
+        status = "disabled";
+    };
+
+    sensors {
         compatible = "zmk,keymap-sensors";
-        sensors = <&left_encoder &right_encoder>;
-        triggers-per-rotation = <20>;
+        sensors = <&left_thumbstick>;
     };
 };
 
