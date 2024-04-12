@@ -7,7 +7,7 @@ manifest:
   projects:
     - name: zmk
       remote: jridgewell
-      revision: iris58-bt
+      revision: feature/no-sleep-connection
       import: app/west.yml
   self:
     path: config
