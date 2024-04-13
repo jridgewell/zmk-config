@@ -45,17 +45,27 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(4,4) RC(4,7) RC(3,6) RC(3,7) 
 
     };
 
-    left_thumbstick: left_thumbstick {
-        compatible = "ck,thb";
-        io-channels = <&adc 3>, <&adc 2>;
-        io-channel-names = "Y-AXIS", "X-AXIS";
-        min-mv = <300>;
-        max-mv = <3000>;
+    left_joystickx: left_joystickx {
+        compatible = "joystick";
+        label = "JOYSTICKX";
+        io-channels = <&adc 2>;
+        resolution = <512>;
+        frequency = <50>;
+        min_on = <256>;
+    };
+
+    left_joysticky: left_joysticky {
+        compatible = "joystick";
+        label = "JOYSTICKY";
+        io-channels = <&adc 3>;
+        resolution = <512>;
+        frequency = <50>;
+        min_on = <256>;
     };
 
     sensors: sensors {
         compatible = "zmk,keymap-sensors";
-        sensors = <&left_thumbstick>;
+        sensors = <&left_joystickx &left_joysticky>;
     };
 };
 
