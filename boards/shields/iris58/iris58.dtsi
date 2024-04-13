@@ -47,7 +47,7 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(4,4) RC(4,7) RC(3,6) RC(3,7) 
 
     left_thumbstick: left_thumbstick {
         compatible = "ck,thb";
-        io-channels = <&adc 6>, <&adc 5>;
+        io-channels = <&adc 5>, <&adc 7>;
         io-channel-names = "X-AXIS", "Y-AXIS";
         min-mv = <300>;
         max-mv = <3000>;
