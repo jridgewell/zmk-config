@@ -51,7 +51,7 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(4,4) RC(4,7) RC(3,6) RC(3,7) 
         io-channels = <&adc 2>;
         resolution = <512>;
         frequency = <50>;
-        min_on = <256>;
+        min_on = <300>;
     };
 
     left_joysticky: left_joysticky {
@@ -60,7 +60,7 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(4,4) RC(4,7) RC(3,6) RC(3,7) 
         io-channels = <&adc 3>;
         resolution = <512>;
         frequency = <50>;
-        min_on = <256>;
+        min_on = <300>;
     };
 
     sensors: sensors {
