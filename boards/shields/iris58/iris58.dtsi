@@ -45,7 +45,7 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(4,4) RC(4,7) RC(3,6) RC(3,7) 
 
     };
 
-    left_thumbstick: thb {
+    left_thumbstick: left_thumbstick {
         compatible = "ck,thb";
         io-channels = <&adc 3>, <&adc 2>;
         io-channel-names = "Y-AXIS", "X-AXIS";
