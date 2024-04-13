@@ -17,9 +17,6 @@
         ;
 };
 
-&left_joystickx {
-    status = "okay";
-};
-&left_joysticky {
+&left_thumbstick {
     status = "okay";
 };
