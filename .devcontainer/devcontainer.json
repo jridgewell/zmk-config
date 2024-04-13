@@ -4,8 +4,8 @@
       "dockerfile": "Dockerfile",
       "args": {
         // git clone settings
-        "ZMK_URL": "https://github.com/zmkfirmware/zmk.git",
-        "ZMK_BRANCH": "main",
+        "ZMK_URL": "https://github.com/jridgewell/zmk.git",
+        "ZMK_BRANCH": "jrl-thb",
         "ZMK_PATH": "/zmk"
       }
     },

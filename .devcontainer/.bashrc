@@ -9,6 +9,10 @@ build-test(){
     base-build nrfmicro_13 test-board
 }
 
+build-iris58(){
+    base-build nice_nano_v2 "iris58_left nice_view_adapter nice_view"
+}
+
 build-nrfmicro-reset(){
     base-build nrfmicro_13 settings_reset
 }
@@ -22,12 +26,14 @@ base-build() ( # use a subshell
         -s app \
         -d build \
         -b $1 \
-        -- -DZMK_CONFIG=$WORKPACE_PATH/config \
-        -DSHIELD=$2 # build
+        -- \
+        -DZMK_CONFIG=$WORKPACE_PATH/config \
+        -DZMK_EXTRA_MODULES=$WORKPACE_PATH \
+        -DSHIELD="$2" # build
     FW_FILE="$WORKPACE_PATH/$BUILD_SUBFOLDER/$2_$1-zmk.uf2"
-    rm -rf $FW_FILE # remove the FW file from the target folder
+    # rm -rf $FW_FILE # remove the FW file from the target folder
     mkdir -p $WORKPACE_PATH/$BUILD_SUBFOLDER
-    cp build/zephyr/zmk.uf2 $FW_FILE # copy FW to the target folder
+    cp build/zephyr/zmk.uf2 "$FW_FILE" # copy FW to the target folder
     echo -e "${Green}SUCCESSFULLY build $FW_FILE${Color_Off}"
 )
 
