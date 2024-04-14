@@ -45,18 +45,23 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(4,4) RC(4,7) RC(3,6) RC(3,7) 
 
     };
 
-    left_thumbstick: left_thumbstick {
+    left_thumbstickx: left_thumbstickx {
         compatible = "ck,thb";
-        io-channels = <&adc 5>, <&adc 7>;
-        io-channel-names = "X-AXIS", "Y-AXIS";
-        min-mv = <300>;
-        max-mv = <3000>;
-        freq = <1>;
+        io-channels = <&adc 5>;
+        dead-zone = <750>;
+        frequency = <125>;
+    };
+    left_thumbsticky: left_thumbsticky {
+        compatible = "ck,thb";
+        io-channels = <&adc 7>;
+        dead-zone = <750>;
+        frequency = <125>;
     };
 
     sensors: sensors {
         compatible = "zmk,keymap-sensors";
-        sensors = <&left_thumbstick>;
+        sensors = <&left_thumbstickx &left_thumbsticky>;
+        triggers-per-rotation = <360>;
     };
 };
 

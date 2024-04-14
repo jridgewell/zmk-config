@@ -17,6 +17,10 @@
         ;
 };
 
-&left_thumbstick {
+&left_thumbstickx {
+    status = "okay";
+};
+
+&left_thumbsticky {
     status = "okay";
 };
