@@ -37,19 +37,19 @@
         // ----------------------------------------------------------------------------------------------------
         // |   `   |  1  |  2  |   3   |  4  |  5  |                  |  6  |  7  |   8   |  9  |  0  |  DEL  |
         // |  TAB  |  Q  |  W  |   E   |  R  |  T  |                  |  Y  |  U  |   I   |  O  |  P  |   \   |
-        // |  CTRL |  A  |  S  |   D   |  F  |  G  |  MUTE |  |  PLAY |  H  |  J  |   K   |  L  |  ;  |   '   |
+        // |  CTRL |  A  |  S  |   D   |  F  |  G  |  PLAY |  |  MUTE |  H  |  J  |   K   |  L  |  ;  |   '   |
         // | SHIFT |  Z  |  X  |   C   |  V  |  B  |  ESC  |  |  BSPC |  N  |  M  |   ,   |  .  |  /  | SHIFT |
         //                     | LOWER | ALT | GUI | SPACE |  | ENTER | GUI | ALT | RAISE |
         default_layer {
             bindings = <
 &kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4    &kp N5                             &kp N6    &kp N7    &kp N8     &kp N9   &kp N0    &kp DEL
 &kp TAB    &kp Q   &kp W   &kp E   &kp R     &kp T                              &kp Y     &kp U     &kp I      &kp O    &kp P     &kp BACKSLASH
-&kp LCTRL  &kp A   &kp S   &kp D   &kp F     &kp G     &kp C_MUTE    &kp C_PP   &kp H     &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LCTRL  &kp A   &kp S   &kp D   &kp F     &kp G     &kp C_PP      &kp C_MUTE &kp H     &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LSHFT  &kp Z   &kp X   &kp C   &kp V     &kp B     &kp ESCAPE    &kp BSPC   &kp N     &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
                            &td0    &kp LALT  &kp LGUI  &kp SPACE     &kp ENTER  &kp RGUI  &kp RALT  &mo 3
             >;
 
-            sensor-bindings = <&push_inc_dec_kp RIGHT LEFT &push_inc_dec_kp UP DOWN>;
+            sensor-bindings = <&push_inc_dec_kp RIGHT LEFT &push_inc_dec_kp UP DOWN &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         // --------------------------------------------------------------------------------------------
