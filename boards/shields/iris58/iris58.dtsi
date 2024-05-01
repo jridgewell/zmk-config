@@ -47,21 +47,20 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(4,4) RC(4,7) RC(3,6) RC(3,7) 
 
     left_thumbstickx: left_thumbstickx {
         compatible = "ck,thb";
-        io-channels = <&adc 5>;
         dead-zone = <750>;
         frequency = <125>;
+        status = "disabled";
     };
     left_thumbsticky: left_thumbsticky {
         compatible = "ck,thb";
-        io-channels = <&adc 7>;
         dead-zone = <750>;
         frequency = <125>;
+        status = "disabled";
     };
     right_encoder: encoder_right {
         compatible = "alps,ec11";
-        a-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        b-gpios = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         steps = <80>;
+        status = "disabled";
     };
 
     sensors: sensors {

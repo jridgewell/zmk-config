@@ -18,9 +18,11 @@
 };
 
 &left_thumbstickx {
+    io-channels = <&adc 5>;
     status = "okay";
 };
 
 &left_thumbsticky {
+    io-channels = <&adc 7>;
     status = "okay";
 };
